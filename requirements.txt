@@ -1,2 +1,12 @@
-慰摮獡渊浵祰猊楣楫⵴敬牡੮牰灯敨ੴ慭灴潬汴扩猊慥潢湲樊灵瑹牥昊獡慴楰甊楶潣湲瀊摹湡楴੣streamlit
+pandas
+numpy
+scikit-learn
+prophet
 plotly
+streamlit
+matplotlib
+seaborn
+jupyter
+fastapi
+uvicorn
+pydantic
