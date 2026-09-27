@@ -8,9 +8,13 @@ import numpy as np
 st.set_page_config(page_title="Sales & Inventory Analytics", layout="wide", initial_sidebar_state="expanded")
 
 # --- DATA LOADING ---
+import os
+
 @st.cache_data
 def load_data():
-    df = pd.read_csv('Store_inventory_data.csv')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(current_dir, 'Store_inventory_data.csv')
+    df = pd.read_csv(file_path)
     df['Date'] = pd.to_datetime(df['Date'])
     df['Revenue'] = df['Units Sold'] * df['Price']
     df['Discount Value'] = (df['Price'] * df['Units Sold']) * (df['Discount'] / 100)
