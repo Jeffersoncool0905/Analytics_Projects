@@ -1,0 +1,23 @@
+{
+    "name": "Sales & Inventory Forecasting",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "workspaceFolder": "/workspace",
+    "postCreateCommand": "python -m ipykernel install --user --name=devcontainer",
+    "forwardPorts": [8000, 8888, 3000]
+}
