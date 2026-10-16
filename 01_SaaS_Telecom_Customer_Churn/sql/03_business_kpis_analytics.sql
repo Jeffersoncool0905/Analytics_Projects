@@ -5,9 +5,9 @@
 -- AUTHOR: Jefferson
 -- ====================================================================
 
--- --------------------------------------------------------------------
+
 -- QUERY 1: Executive KPI Dashboard Summary
--- --------------------------------------------------------------------
+
 SELECT 
     COUNT(f.customer_id) AS total_customers,
     SUM(CASE WHEN f.churn_status = 'Yes' THEN 1 ELSE 0 END) AS churned_customers,
@@ -20,9 +20,9 @@ SELECT
 FROM fact_subscriptions f;
 
 
--- --------------------------------------------------------------------
+
 -- QUERY 2: Churn & Financial Exposure by Contract Type
--- --------------------------------------------------------------------
+
 SELECT 
     c.contract_type,
     COUNT(f.customer_id) AS total_accounts,
@@ -37,10 +37,9 @@ GROUP BY c.contract_type
 ORDER BY churn_rate_pct DESC;
 
 
--- --------------------------------------------------------------------
 -- QUERY 3: The "Security & Support Shield" Analysis
 -- Evaluating how Tech Support & Online Security mitigate churn
--- --------------------------------------------------------------------
+
 SELECT 
     s.internet_service,
     s.tech_support,
@@ -55,9 +54,8 @@ GROUP BY s.internet_service, s.tech_support, s.online_security
 ORDER BY s.internet_service, churn_rate_pct DESC;
 
 
--- --------------------------------------------------------------------
 -- QUERY 4: Customer Spending Quartiles & ARPU Tiering (Window Function NTILE)
--- --------------------------------------------------------------------
+
 WITH customer_spending_quartiles AS (
     SELECT 
         customer_id,
@@ -85,10 +83,10 @@ GROUP BY spending_quartile
 ORDER BY spending_quartile;
 
 
--- --------------------------------------------------------------------
+
 -- QUERY 5: Top 15 High-Risk Accounts Prioritized for Retention Outreach
 -- Uses DENSE_RANK() by Expected MRR Loss (Probability * Monthly Charges)
--- --------------------------------------------------------------------
+
 WITH prioritized_accounts AS (
     SELECT 
         f.customer_id,
@@ -119,10 +117,9 @@ WHERE outreach_priority_rank <= 15
 ORDER BY outreach_priority_rank;
 
 
--- --------------------------------------------------------------------
 -- QUERY 6: Evaluating Predictive Model Accuracy directly in SQL
 -- Confusion Matrix & Error Classification
--- --------------------------------------------------------------------
+
 SELECT 
     CASE 
         WHEN churn_status = 'Yes' AND predicted_churn = 1 THEN 'True Positive (Correctly Predicted Churn)'
