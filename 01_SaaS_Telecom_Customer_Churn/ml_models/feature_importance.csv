@@ -1,0 +1,25 @@
+feature,importance
+tenure_months,0.18327012041531385
+total_charges,0.17650727564629642
+contract_type_Two year,0.12177348904585701
+contract_type_One year,0.1160889684464137
+monthly_charges,0.10280801710323478
+monthly_usage_gb,0.07757462681125235
+support_tickets,0.04569775359104842
+internet_service_Fiber optic,0.03223315585048956
+payment_method_Electronic check,0.020503503603390275
+online_security_Yes,0.011543850584313939
+tech_support_Yes,0.01130411789620438
+paperless_billing_Yes,0.010186568358057122
+senior_citizen_1,0.01012188326943934
+dependents_Yes,0.00901336859916151
+partner_Yes,0.008948960712330332
+device_protection_Yes,0.0085430675917686
+online_backup_Yes,0.007906314327164553
+payment_method_Mailed check,0.007575917482083165
+tech_support_No internet service,0.007387480021966124
+payment_method_Credit card (automatic),0.007336134431580675
+online_security_No internet service,0.006775987824964852
+online_backup_No internet service,0.006750376078201051
+internet_service_No,0.005512945909259235
+device_protection_No internet service,0.004636116400208811
