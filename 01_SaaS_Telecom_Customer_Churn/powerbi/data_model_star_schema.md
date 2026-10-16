@@ -1,4 +1,4 @@
-# 🌟 Power BI Data Model Architecture (Star Schema)
+
 
 This document outlines the relational data modeling approach applied in Power BI. A **Star Schema** architecture is implemented to ensure fast query performance, simplified DAX calculations, and intuitive report authoring.
 
@@ -63,7 +63,7 @@ erDiagram
 
 ---
 
-## 2. Model Guidelines & Best Practices
+ 2. Model Guidelines & Best Practices
 
 1. **Cardinality & Cross-Filtering:**
    * All relationships are strictly `1:*` (One-to-Many).
