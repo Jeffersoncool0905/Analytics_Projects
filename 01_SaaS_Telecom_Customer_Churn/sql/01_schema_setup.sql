@@ -1,10 +1,10 @@
--- ====================================================================
+
 -- PROJECT: SaaS / Telecom Customer Churn & Retention Analytics
 -- SCRIPT: 01_schema_setup.sql
 -- DESCRIPTION: DDL Script for Normalized Star Schema & Fact/Dimension Tables
 -- AUTHOR: Jefferson
 -- COMPATIBILITY: PostgreSQL, MySQL 8+, SQLite, SQL Server
--- ====================================================================
+
 
 -- 1. Create Staging Table for Raw / Scored Ingestion
 DROP TABLE IF EXISTS stg_customer_churn;
@@ -40,9 +40,8 @@ CREATE TABLE stg_customer_churn (
     churn_risk_tier         VARCHAR(20)
 );
 
--- ====================================================================
+
 -- 2. Star Schema Dimension & Fact Tables
--- ====================================================================
 
 -- Dimension: Customer Demographics
 DROP TABLE IF EXISTS dim_customers;
