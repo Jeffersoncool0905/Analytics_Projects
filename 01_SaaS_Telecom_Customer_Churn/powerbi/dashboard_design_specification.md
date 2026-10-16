@@ -1,10 +1,4 @@
-# 📊 Power BI Dashboard Build Specification
-
-Follow these exact steps to build the interactive 3-page **SaaS / Telecom Customer Churn & Retention Dashboard** in Power BI Desktop.
-
----
-
-## 🎨 Theme & Palette
+ Power BI Dashboard Build Specification
 * **Primary / Header:** Deep Navy Blue (`#1B365D`)
 * **Accent / Interactive:** Royal Blue (`#2A5C9A`)
 * **Alert / Churn:** Coral Red (`#C0392B`)
@@ -14,9 +8,9 @@ Follow these exact steps to build the interactive 3-page **SaaS / Telecom Custom
 
 ---
 
-## 📄 Page 1: Executive Overview
+Page 1: Executive Overview
 
-### Layout Structure
+Layout Structure
 1. **Top Header Banner:**
    * Text: *"SaaS / Telecom Executive Churn & Revenue Intelligence"*
    * Date Filter Slicer: `signup_date` (Between slider)
@@ -42,8 +36,7 @@ Follow these exact steps to build the interactive 3-page **SaaS / Telecom Custom
    * Line Value: `[Churn Rate %]` (shows sharp decline as tenure increases)
 
 ---
-
-## 📄 Page 2: Churn Drivers & Behavioral Analytics
+Page 2: Churn Drivers & Behavioral Analytics
 
 1. **Top Header Banner:**
    * Text: *"Root-Cause Analysis & Service Adoption Impact"*
@@ -63,7 +56,7 @@ Follow these exact steps to build the interactive 3-page **SaaS / Telecom Custom
 
 ---
 
-## 📄 Page 3: Predictive Risk & Retention Action Hub
+Page 3: Predictive Risk & Retention Action Hub
 
 1. **Top Header Banner:**
    * Text: *"Predictive Machine Learning Churn Risk & Outreach Action"*
