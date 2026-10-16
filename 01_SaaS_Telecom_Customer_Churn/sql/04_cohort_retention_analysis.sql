@@ -5,9 +5,9 @@
 -- AUTHOR: Jefferson
 -- ====================================================================
 
--- --------------------------------------------------------------------
+
 -- STEP 1: Define Cohort Groups and Active Lifespan Milestones
--- --------------------------------------------------------------------
+
 WITH customer_cohorts AS (
     SELECT 
         c.customer_id,
@@ -25,9 +25,9 @@ WITH customer_cohorts AS (
     JOIN fact_subscriptions f ON c.customer_id = f.customer_id
 ),
 
--- --------------------------------------------------------------------
+
 -- STEP 2: Calculate Active Status at Lifespan Milestones (Months 3, 6, 12, 24)
--- --------------------------------------------------------------------
+
 cohort_milestones AS (
     SELECT 
         cohort_quarter,
@@ -43,9 +43,9 @@ cohort_milestones AS (
     FROM customer_cohorts
 ),
 
--- --------------------------------------------------------------------
+
 -- STEP 3: Aggregate Cohort Volume and Milestone Retention
--- --------------------------------------------------------------------
+
 cohort_summary AS (
     SELECT 
         cohort_quarter,
@@ -60,9 +60,9 @@ cohort_summary AS (
     GROUP BY cohort_quarter
 )
 
--- --------------------------------------------------------------------
+
 -- FINAL OUTPUT: Retention Percentage Matrix by Cohort
--- --------------------------------------------------------------------
+
 SELECT 
     cohort_quarter,
     cohort_size,
