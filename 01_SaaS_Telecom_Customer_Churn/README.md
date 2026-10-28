@@ -1,4 +1,4 @@
-# 📊 SaaS & Telecom Customer Churn & Retention Analytics
+SaaS & Telecom Customer Churn & Retention Analytics
 ### *End-to-End Analytics Case Study: Excel, SQL, Machine Learning & Power BI*
 
 ![Project Status](https://img.shields.io/badge/Status-Completed-success)
@@ -7,13 +7,13 @@
 
 ---
 
-## 📌 Executive Summary
+Executive Summary
 
 Customer attrition is one of the costliest threats to subscription businesses. In this project, I engineered an end-to-end data analytics and business intelligence solution analyzing **7,043 subscriber accounts** for a telecommunications & subscription SaaS provider. 
 
 By unifying **Microsoft Excel**, **SQL (PostgreSQL / SQLite)**, **Machine Learning (Scikit-Learn)**, and **Microsoft Power BI**, this project identifies root-cause churn behaviors, projects financial exposure, and creates an automated retention prioritization workflow.
 
-### 🎯 Key Performance Indicators (KPIs)
+Key Performance Indicators (KPIs)
 * **Total Customer Base:** 7,043 Accounts
 * **Active Paying Base:** 5,219 Accounts (74.1%)
 * **Customer Churn Rate:** **25.9%** (1,824 Churned Accounts)
@@ -23,7 +23,7 @@ By unifying **Microsoft Excel**, **SQL (PostgreSQL / SQLite)**, **Machine Learni
 
 ---
 
-## 🔍 Key Business Insights
+Key Business Insights
 
 1. **The Contract Length Vulnerability:**
    * **Month-to-month contracts** experience an alarming **41.8% churn rate**, accounting for over **82% of all churned revenue**.
@@ -38,7 +38,7 @@ By unifying **Microsoft Excel**, **SQL (PostgreSQL / SQLite)**, **Machine Learni
 
 ---
 
-## 🏗️ Technical Architecture & Pipeline
+Technical Architecture & Pipeline
 
 ```mermaid
 flowchart TD
@@ -50,7 +50,7 @@ flowchart TD
 
 ---
 
-## 🛠️ Project Deliverables & Folder Structure
+Project Deliverables & Folder Structure
 
 ```text
 01_SaaS_Telecom_Customer_Churn/
@@ -84,7 +84,7 @@ flowchart TD
 
 ---
 
-## 💻 1. Excel Modeling Highlights
+1. Excel Modeling Highlights
 
 The workbook [`Customer_Churn_Retention_Model.xlsx`](./excel/Customer_Churn_Retention_Model.xlsx) includes 4 structured sheets:
 * **`Executive_Summary`:** Formatted KPI cards and cross-tabulation summaries.
@@ -96,7 +96,7 @@ The workbook [`Customer_Churn_Retention_Model.xlsx`](./excel/Customer_Churn_Rete
 
 ---
 
-## 🗄️ 2. SQL Data Modeling & Advanced Queries
+2. SQL Data Modeling & Advanced Queries
 
 ### Relational Star Schema
 Data was modeled into a Kimball-style Star Schema for optimized analytical processing:
@@ -126,7 +126,7 @@ SELECT * FROM prioritized_accounts WHERE outreach_priority_rank <= 15;
 
 ---
 
-## 🤖 3. Predictive Machine Learning (Scikit-Learn)
+3. Predictive Machine Learning (Scikit-Learn)
 
 A **Random Forest Classifier** was trained using an 80/20 stratified split to assign each subscriber a continuous churn probability ($0.0 \rightarrow 1.0$) and a discrete risk category:
 * **High Risk:** $\text{Probability} \ge 0.65$
@@ -144,7 +144,7 @@ A **Random Forest Classifier** was trained using an 80/20 stratified split to as
 
 ---
 
-## 📊 4. Power BI Executive Dashboard Architecture
+4. Power BI Executive Dashboard Architecture
 
 The interactive Power BI solution is structured across 3 functional executive views:
 
@@ -185,7 +185,7 @@ ROUND([Total Customers] * 'Churn Prediction %'[Churn Prediction % Value], 0) * [
 
 ---
 
-## 📈 Strategic Business Recommendations
+Strategic Business Recommendations
 
 1. **Incentivize Annual Contract Migrations:** Offer month-to-month customers a 10% discount to transition to 1-year contracts upon reaching Month 3.
 2. **Automate Tech Support Bundling for Fiber Optic:** Bundle complimentary Tech Support for the first 90 days of Fiber Optic service to reduce the 38% unassisted churn rate.
@@ -193,7 +193,7 @@ ROUND([Total Customers] * 'Churn Prediction %'[Churn Prediction % Value], 0) * [
 
 ---
 
-## 🚀 How to Run & Reproduce
+How to Run & Reproduce
 
 ```bash
 # 1. Clone the repository

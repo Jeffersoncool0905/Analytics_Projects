@@ -1,4 +1,4 @@
-# 📐 Power BI DAX Measures Documentation
+Power BI DAX Measures Documentation
 
 This document contains all production DAX measures developed for the **SaaS / Telecom Customer Churn & Retention Executive Dashboard**. 
 
@@ -6,7 +6,7 @@ Measures are categorized into dedicated display folders inside a blank calculati
 
 ---
 
-## 1. Core Volume Measures
+1. Core Volume Measures
 
 ### `Total Customers`
 ```dax
@@ -40,7 +40,7 @@ CALCULATE(
 
 ---
 
-## 2. Percentage & Retention Rates
+2. Percentage & Retention Rates
 
 ### `Churn Rate %`
 ```dax
@@ -64,7 +64,7 @@ Retention Rate % =
 
 ---
 
-## 3. Financial & Revenue Metrics (MRR / CLV)
+3. Financial & Revenue Metrics (MRR / CLV)
 
 ### `Total MRR`
 ```dax
@@ -121,8 +121,7 @@ DIVIDE(
 * **Description:** Expected total revenue earned from a customer before churn occurs.
 
 ---
-
-## 4. Machine Learning & Predictive Risk Measures
+4. Machine Learning & Predictive Risk Measures
 
 ### `Average Churn Probability`
 ```dax
@@ -156,8 +155,7 @@ SUMX(
 * **Description:** Risk-weighted financial exposure calculated dynamically via SUMX (`monthly_charges * churn_probability`).
 
 ---
-
-## 5. What-If Financial Impact Measures (Parameter-Driven)
+5. What-If Financial Impact Measures (Parameter-Driven)
 
 ### `Target Churn Reduction (Parameter)`
 ```dax

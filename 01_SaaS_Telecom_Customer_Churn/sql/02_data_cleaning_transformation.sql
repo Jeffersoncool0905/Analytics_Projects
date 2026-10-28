@@ -1,9 +1,9 @@
--- ====================================================================
+
 -- PROJECT: SaaS / Telecom Customer Churn & Retention Analytics
 -- SCRIPT: 02_data_cleaning_transformation.sql
 -- DESCRIPTION: Data Cleaning, Standardization, and Star Schema Population
 -- AUTHOR: Jefferson
--- ====================================================================
+
 
 -- 1. Data Quality Checks & Data Profiling
 -- Check for NULLs or duplicate customer IDs

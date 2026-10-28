@@ -1,10 +1,10 @@
-# 📊 Data Analytics & Business Intelligence Portfolio
+Data Analytics & Business Intelligence Portfolio
 
 Welcome to my **Data Analytics & Business Intelligence Portfolio**! This repository demonstrates end-to-end data analytics, relational database modeling, business intelligence dashboards, and predictive machine learning models built to solve high-impact business problems.
 
 ---
 
-## 🛠️ Core Analytics Stack
+Core Analytics Stack
 
 | Domain | Tools & Technologies | Key Capabilities |
 | :--- | :--- | :--- |
@@ -16,7 +16,7 @@ Welcome to my **Data Analytics & Business Intelligence Portfolio**! This reposit
 
 ---
 
-## 📁 Featured Projects
+Featured Projects
 
 ### 1. [SaaS & Telecom Customer Churn & Retention Analytics](./01_SaaS_Telecom_Customer_Churn/)
 * **Stack:** `Excel` | `SQL` | `Power BI` | `Python (Scikit-Learn)`
@@ -41,6 +41,6 @@ Welcome to my **Data Analytics & Business Intelligence Portfolio**! This reposit
 
 ---
 
-## 📬 Contact & Connect
+Contact & Connect
 * **GitHub:** [@Jeffersoncool0905](https://github.com/Jeffersoncool0905)
 * **Repository:** [Analytics_Projects](https://github.com/Jeffersoncool0905/Analytics_Projects)
