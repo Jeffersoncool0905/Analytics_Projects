@@ -146,15 +146,41 @@ A **Random Forest Classifier** was trained using an 80/20 stratified split to as
 
 ## 📊 4. Power BI Executive Dashboard Architecture
 
-The Power BI solution is structured across 3 functional pages:
-1. **Executive Churn & Revenue Overview:** High-level KPIs, churn by contract, internet type, and tenure lifecycle.
-2. **Behavioral Root-Cause Analysis:** Decomposition tree identifying service adoption bottlenecks (Tech Support & Security) and payment channel correlations.
-3. **Predictive Action & What-If Simulation:** Dynamic parameter slider showing financial impact of retention targets alongside an actionable customer outreach list.
+The interactive Power BI solution is structured across 3 functional executive views:
 
-### Sample DAX Measure (Risk-Weighted Financial Exposure)
+### Page 1: Executive Churn & Revenue Overview
+High-level KPIs, customer retention lifecycle curve, churn by contract type, and revenue exposure by internet technology.
+![Executive Overview](./powerbi/PAGE_1_Dashboard.jpg)
+
+### Page 2: Behavioral Root-Cause & Service Adoption Analysis
+Root-cause decomposition tree identifying service bottlenecks (Tech Support & Security) and payment channel correlations.
+![Root-Cause Drivers](./powerbi/Behavioral%20&%20Root-Cause_Analytics_Dashboard_2.jpg)
+
+### Page 3: Predictive Churn Risk & Retention Outreach Hub
+Machine learning risk gauge, active high-risk accounts, interactive What-If Churn Reduction Simulator slider, and daily customer success call priority list.
+![Predictive Retention Action](./powerbi/Predictive_Risk%20&%20Outreach_Action_Hub_Dashboard_3.jpg)
+
+### Featured DAX Measures
+
 ```dax
+-- Dynamic Risk-Weighted Financial Exposure
 Expected MRR Loss = 
-SUM('fact_subscriptions'[expected_mrr_loss])
+SUMX(
+    'telecom_customer_churn_with_predictions',
+    'telecom_customer_churn_with_predictions'[monthly_charges] * 'telecom_customer_churn_with_predictions'[churn_probability]
+)
+
+-- High Risk Active Customer Accounts (Predicted Churn Probability >= 35%)
+High Risk Customers = 
+CALCULATE(
+    [Total Customers],
+    'telecom_customer_churn_with_predictions'[churn_probability] >= 0.35,
+    'telecom_customer_churn_with_predictions'[churn_status] = "No"
+) + 0
+
+-- What-If Parameter Dynamic Annual Savings Calculator
+Simulated Annual Savings = 
+ROUND([Total Customers] * 'Churn Prediction %'[Churn Prediction % Value], 0) * [ARPU] * 12
 ```
 
 ---

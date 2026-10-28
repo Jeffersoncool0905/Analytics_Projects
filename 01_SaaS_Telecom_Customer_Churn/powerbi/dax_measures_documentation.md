@@ -147,10 +147,13 @@ CALCULATE(
 ### `Expected MRR Loss`
 ```dax
 Expected MRR Loss = 
-SUM('fact_subscriptions'[expected_mrr_loss])
+SUMX(
+    'telecom_customer_churn_with_predictions',
+    'telecom_customer_churn_with_predictions'[monthly_charges] * 'telecom_customer_churn_with_predictions'[churn_probability]
+)
 ```
 * **Format:** Currency (`$#,##0`)
-* **Description:** Risk-weighted financial exposure (`Monthly Charges * Churn Probability`).
+* **Description:** Risk-weighted financial exposure calculated dynamically via SUMX (`monthly_charges * churn_probability`).
 
 ---
 
