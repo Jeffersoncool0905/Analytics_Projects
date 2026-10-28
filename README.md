@@ -4,7 +4,7 @@ Welcome to my **Data Analytics & Business Intelligence Portfolio**! This reposit
 
 ---
 
-## 🛠️ Core Analytics Stack
+Core Analytics Stack
 
 | Domain | Tools & Technologies | Key Capabilities |
 | :--- | :--- | :--- |
